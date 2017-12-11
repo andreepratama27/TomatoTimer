@@ -1,0 +1,34 @@
+$accent: #FF5963;
+$yellow: #FFDD55;
+$light: #f3f4f9;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: $light;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  background-color: $light;
+  border: 1px solid red;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  .image-wrapper {
+    width: 3rem;
+    height: 3rem;
+
+    img {
+      max-height: initial;
+    }
+  }
+}
