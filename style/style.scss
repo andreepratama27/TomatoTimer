@@ -12,16 +12,19 @@ body {
 body {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: $light;
+  background-color: $accent;
   font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
-  background-color: $light;
-  border: 1px solid red;
+  background-color: $accent;
   height: 5rem;
   display: flex;
   align-items: center;
+
+  .navbar-item {
+    display: flex;
+  }
 
   .image-wrapper {
     width: 3rem;
@@ -30,5 +33,59 @@ body {
     img {
       max-height: initial;
     }
+  }
+
+  .text-wrapper {
+    padding-left: .8rem;
+    color: $light;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+}
+
+.timer-wrapper {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .timer {
+    display: flex;
+
+    .minutes,
+    .separator,
+    .seconds {
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: $light;
+    }
+
+    .separator {
+      padding-left: .8rem;
+      padding-right: .8rem;
+    }
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+
+  button {
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: $light;
+  }
+
+  button:focus {
+    box-shadow: none !important;
+    border-color: $light;
+    color: $light;
   }
 }

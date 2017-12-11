@@ -5,6 +5,9 @@ const Navbar = () => (
         <div className="image-wrapper">
           <img src="/build/tomato.png" alt="" className="img img-responsive" />
         </div>
+        <div className="text-wrapper">
+          Tomato Timer
+        </div>
       </a>
     </div>
   </div>
