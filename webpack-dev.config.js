@@ -14,6 +14,16 @@ module.exports = {
         port: 3000
     },
 
+    resolve: {
+      alias: {
+        Actions: path.resolve(__dirname, 'reducers/'),
+        Containers: path.resolve(__dirname, 'containers/'),
+        Components: path.resolve(__dirname, 'components/'),
+        Reducers: path.resolve(__dirname, 'reducers/'),
+        Style: path.resolve(__dirname, 'style/')
+      }
+    },
+
     module: {
         rules: [
             {
