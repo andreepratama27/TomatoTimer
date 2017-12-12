@@ -6,13 +6,17 @@ import Button from './components/Button'
 class App extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      start: 25
+    }
   }
 
   render() {
+
     return (
       <div className='wrapper'>
         <Navbar />
-        <Timer />
+        <Timer {...this.state} />
         <Button />
       </div>
     )

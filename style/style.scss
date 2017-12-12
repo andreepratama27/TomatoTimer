@@ -14,6 +14,18 @@ body {
   padding: 0 !important;
   background-color: $accent;
   font-family: 'Montserrat', sans-serif;
+  position: relative;
+
+  &:before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darken($accent, 30%);
+  }
 }
 
 .navbar {
@@ -21,6 +33,7 @@ body {
   height: 5rem;
   display: flex;
   align-items: center;
+  position: relative;
 
   .navbar-item {
     display: flex;
