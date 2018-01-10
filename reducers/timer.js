@@ -1,11 +1,7 @@
-const reducers = (state=[], action) => {
-
+const reducers = (state=25, action) => {
     switch(action.type) {
-
         case 'ADD_MINUTE': {
-          return [
-            ...action.data
-          ]
+          console.log('helo')
         }
 
         default: {

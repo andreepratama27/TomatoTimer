@@ -96,7 +96,8 @@ body {
     color: $light;
   }
 
-  button:focus {
+  button:focus,
+  button:active {
     box-shadow: none !important;
     border-color: $light;
     color: $light;

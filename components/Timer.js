@@ -1,11 +1,11 @@
 const Timer = (props) => {
-  const { start } = props
+  const { timer } = props
 
   return (
     <div className="timer-wrapper">
       <div className="timer">
         <div className="minutes">
-          { start }
+          { timer }
         </div>
         <div className="separator">
           :
