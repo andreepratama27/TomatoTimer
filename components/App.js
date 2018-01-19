@@ -7,17 +7,25 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      timer: 25
+      timer: {
+        minute: 25,
+        second: 59
+      }
     }
   }
 
   startClock () {
-    const { timer } = this.state
-
-    setInterval(() => {
+    const countDown = setInterval(() => {
       this.setState({
-        timer: this.state.timer - 1
+        timer: {
+          minute: 25,
+          second: this.state.timer.second - 1
+        }
       })
+
+      if (this.state.timer.second === 0) {
+        clearInterval(countDown)
+      }
     }, 1000)
   }
 
