@@ -1,19 +1,34 @@
 import { Component } from 'react'
-import Navbar from './Navbar'
-import Timer from './Timer'
-import Button from './Button'
+import NavbarComponent from './NavbarComponent'
+import TimerComponent from './TimerComponent'
+import ButtonComponent from './ButtonComponent'
 
 class App extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      timer: 25
+    }
+  }
+
+  startClock () {
+    const { timer } = this.state
+
+    setInterval(() => {
+      this.setState({
+        timer: this.state.timer - 1
+      })
+    }, 1000)
   }
 
   render() {
+    const { timer } = this.state
+
     return (
       <div className='wrapper'>
-        <Navbar />
-        <Timer {...this.props} />
-        <Button {...this.props} />
+        <NavbarComponent />
+        <TimerComponent timer={ timer } />
+        <ButtonComponent onClick={ this.startClock.bind(this) } />
       </div>
     )
   }

@@ -1,16 +1,8 @@
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import timerStore from 'Reducers/'
-
-import App from 'Containers/App'
+import App from './components/App'
 import style from './style/style.scss'
 
-const store = createStore(timerStore)
-
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById('app-container')
 )
