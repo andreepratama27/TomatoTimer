@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.6.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",
